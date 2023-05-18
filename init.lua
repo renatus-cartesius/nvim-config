@@ -29,6 +29,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
   })
 end
 
+
+-- Custom configs
 vim.cmd "set guicursor=n-v-c-i:block"
 
 pcall(require, "custom")

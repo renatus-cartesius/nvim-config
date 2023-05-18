@@ -64,4 +64,19 @@ lspconfig.lua_ls.setup {
   },
 }
 
+local servers = {
+  "docker_compose_language_service",
+  "ansiblels",
+  "pylsp",
+  "tsserver"
+}
+
+for _, lsp in ipairs(servers) do
+
+  lspconfig[lsp].setup {
+    on_attach = M.on_attach,
+    capabilities = M.capabilities,
+  }
+end
+
 return M
