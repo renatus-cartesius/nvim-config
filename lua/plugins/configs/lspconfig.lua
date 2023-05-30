@@ -68,7 +68,8 @@ local servers = {
   "docker_compose_language_service",
   "ansiblels",
   "pylsp",
-  "tsserver"
+  "tsserver",
+  "bashls"
 }
 
 for _, lsp in ipairs(servers) do
