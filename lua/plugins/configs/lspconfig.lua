@@ -65,8 +65,6 @@ M.capabilities.textDocument.completion.completionItem = {
 -- }
 
 local servers = {
-  "docker_compose_language_service",
-  "ansiblels",
   "pylsp",
   "tsserver",
   "bashls"
@@ -79,5 +77,32 @@ for _, lsp in ipairs(servers) do
     capabilities = M.capabilities,
   }
 end
+
+lspconfig.ansiblels.setup{
+  cmd = { "ansible-language-server", "--stdio"},
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  filetypes = { "*.yaml.ansible" },
+  settings = {
+    ansible = {
+      ansible = {
+      path = "ansible"
+    },
+    executionEnvironment = {
+      enabled = false
+    },
+    python = {
+      interpreterPath = "python"
+    },
+    validation = {
+      enabled = true,
+      lint = {
+        enabled = true,
+        path = "ansible-lint"
+      }
+    }
+    }
+  }
+}
 
 return M
