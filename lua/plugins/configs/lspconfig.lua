@@ -67,7 +67,8 @@ M.capabilities.textDocument.completion.completionItem = {
 local servers = {
   "pylsp",
   "tsserver",
-  "bashls"
+  "bashls",
+  "gopls"
 }
 
 for _, lsp in ipairs(servers) do
