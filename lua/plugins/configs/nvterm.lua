@@ -12,10 +12,10 @@ local options = {
     type_opts = {
       float = {
         relative = "editor",
-        row = 0.3,
-        col = 0.25,
+        row = 0.1,
+        col = 0.225,
         width = 0.5,
-        height = 0.4,
+        height = 0.6,
         border = "single",
       },
       horizontal = { location = "rightbelow", split_ratio = 0.3 },

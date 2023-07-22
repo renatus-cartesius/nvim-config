@@ -68,7 +68,8 @@ local servers = {
   "pylsp",
   "tsserver",
   "bashls",
-  "gopls"
+  "gopls",
+  "terraformls"
 }
 
 for _, lsp in ipairs(servers) do
