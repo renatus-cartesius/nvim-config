@@ -32,6 +32,8 @@ end
 
 -- Custom configs
 vim.cmd "set guicursor=n-v-c-i:block"
+vim.cmd "set cindent"
+vim.cmd "set shiftwidth=2"
 
 pcall(require, "custom")
 
